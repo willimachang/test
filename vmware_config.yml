@@ -1,0 +1,47 @@
+default:
+    vsphere_host: "vcenter"
+    vsphere_user: "user"
+    vsphere_password: "password"
+    ignore_ssl: False
+    specs_size: 5000
+    fetch_custom_attributes: True
+    fetch_tags: True
+    fetch_alarms: True
+    collect_only:
+        vms: True
+        vmguests: True
+        datastores: True
+        hosts: True
+        snapshots: True
+
+esx:
+    vsphere_host: vc.example2.com
+    vsphere_user: 'root'
+    vsphere_password: 'password'
+    ignore_ssl: True
+    specs_size: 5000
+    fetch_custom_attributes: True
+    fetch_tags: True
+    fetch_alarms: True
+    collect_only:
+        vms: False
+        vmguests: True
+        datastores: False
+        hosts: True
+        snapshots: True
+
+limited:
+    vsphere_host: slowvc.example.com
+    vsphere_user: 'administrator@vsphere.local'
+    vsphere_password: 'password'
+    ignore_ssl: True
+    specs_size: 5000
+    fetch_custom_attributes: True
+    fetch_tags: True
+    fetch_alarms: False
+    collect_only:
+        vms: False
+        vmguests: False
+        datastores: True
+        hosts: False
+        snapshots: False
